@@ -1,7 +1,8 @@
 /**
  * @file
  * @brief Programa Principal de Raices
- * @author  Rodrigo Alejandro Guspian Perez <rguspian@gmail.com>.
+ * @author  Rodrigo Alejandro Guspian Perez <rguspian@unicauca.edu.co>
+ * @copyright MIT License
 */
 
 #include <iostream>
@@ -20,6 +21,8 @@ int main(int argc, char const *argv[]){
     //caso_2_tvi();
     //caso_1_biseccion();
     //caso_2_biseccion();
-    caso_2_regla_falsa();
+    //caso_1_regla_falsa();
+    //caso_2_newton_rapshon();
+    caso_3_secante();
     return 0;
 }

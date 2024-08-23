@@ -1,7 +1,8 @@
 /**
  * @file
  * @brief Regla Falsa
- * @author  Rodrigo Alejandro Guspian Perez <rguspian@gmail.com>.
+ * @author  Rodrigo Alejandro Guspian Perez <rguspian@unicauca.edu.co>
+ * @copyright MIT License
 */
 
 #ifndef FALSA_H
@@ -39,7 +40,7 @@ namespace raices{
             using raices::es_cero;
             using raices::error_relativo;
 
-            solucion sol(f.str(), xi, xs);
+            solucion sol(f.str(), {xi, xs});
 
             // Paso 0
             if ((f(xi) * f(xs))>= 0.0f){

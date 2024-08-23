@@ -1,7 +1,8 @@
 /**
  * @file
  * @brief Raices
- * @author  Rodrigo Alejandro Guspian Perez <rguspian@gmail.com>.
+ * @author  Rodrigo Alejandro Guspian Perez <rguspian@unicauca.edu.co>
+ * @copyright MIT License
 */
 
 
@@ -46,9 +47,7 @@ namespace raices{
 
     struct solucion{
         string f_str;
-        double a;
-        double b;
-        double h;
+        vector<double> valores_iniciales;
 
         /**
          * @brief Constructor de clase solucion
@@ -57,7 +56,7 @@ namespace raices{
          * @param b Límite superior de la función
          * 
         */
-        solucion(string f_str, double a, double b):f_str(f_str),a(a),b(b){
+        solucion(string f_str, vector<double> valores_iniciales ):f_str(f_str),valores_iniciales(valores_iniciales){
         }
 
 
@@ -96,8 +95,13 @@ namespace raices{
                 }
             }
 
-            cout <<"La solución de " <<f_str<< " en el intervalo [" <<a<<" ,"<< b<< "]" 
-                <<" es: "<<raiz<<endl;
+            cout <<"La solución de " <<f_str
+                << " con valores iniciales";
+            for (auto & x: valores_iniciales){
+                cout <<" "<< x;
+            }
+            cout <<" es: "<<raiz<<endl;
+            
         }
     };
 

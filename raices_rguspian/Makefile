@@ -4,7 +4,7 @@ all: main.o caso.o
 main.o: main.cpp caso.h
 	g++ -c -o main.o main.cpp
 
-caso.o: caso.cpp caso.h biseccion.h tvi.h expression.h falsa.h
+caso.o: caso.cpp caso.h biseccion.h tvi.h expression.h falsa.h newtonRapshon.h secante.h
 	g++ -c -o caso.o caso.cpp
 
 

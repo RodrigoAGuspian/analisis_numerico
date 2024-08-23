@@ -1,7 +1,8 @@
 /**
  * @file
  * @brief Teorema de Valor Inicial
- * @author  Rodrigo Alejandro Guspian Perez <rguspian@gmail.com>.
+ * @author  Rodrigo Alejandro Guspian Perez <rguspian@unicauca.edu.co>
+ * @copyright MIT License
 */
 
 #ifndef TVI_H
@@ -35,7 +36,7 @@ namespace raices{
          * 
         */
         solucion encontrar(double a, double b, double h){
-            solucion sol(f.str(), a, b);
+            solucion sol(f.str(), {a, b});
             // 1. Verificar que el valor de entrada es válido.
 
             // si f(a) * f(b) > 0 retornar solucion NAN

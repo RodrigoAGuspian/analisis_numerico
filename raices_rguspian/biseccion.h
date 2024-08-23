@@ -1,7 +1,8 @@
 /**
  * @file
  * @brief Biseccion
- * @author  Rodrigo Alejandro Guspian Perez <rguspian@gmail.com>.
+ * @author  Rodrigo Alejandro Guspian Perez <rguspian@unicauca.edu.co>
+ * @copyright MIT License
 */
 
 #ifndef BISECCION_H
@@ -41,7 +42,7 @@ namespace raices{
             using raices::es_cero;
             using raices::error_relativo;
 
-            solucion sol(f.str(), a, b);
+            solucion sol(f.str(), {a, b});
 
             // Paso 0
             if ((f(a) * f(b))>= 0.0f){
