@@ -67,6 +67,11 @@ namespace raices{
                 // Paso 4 repetimos el calculo de xr
                 double numerador = f(x1)* (x0-x1);
                 double denominador = f(x0) - f(x1);
+
+                // Comprobamos que el denominador que si es 0 retorne la solucion
+                if (denominador == 0.0f){
+                    return sol;
+                }
                 
                 double x2 = x1 - (numerador / denominador);
 

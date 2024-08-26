@@ -10,9 +10,13 @@
  
 void caso_1_tvi();
 void caso_1_biseccion();
+void caso_2_biseccion();
 void caso_1_regla_falsa();
+void caso_2_regla_falsa();
 void caso_1_newton_rapshon();
 void caso_2_newton_rapshon();
-void caso_3_secante();
+void caso_1_secante();
+void caso_2_secante();
+
 
 #endif

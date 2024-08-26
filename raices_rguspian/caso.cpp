@@ -11,8 +11,10 @@
 #include "caso.h"
 #include "encontrar.h"
 
-using std::string;
 
+using std::cout;
+using std::endl;
+using std::string;
 
 /**
 * @brief Caso 1° TVI e^(~x) - ln(x)
@@ -22,39 +24,67 @@ void caso_1_tvi(){
 }
 
 /**
-* @brief Caso 1° Bisección e^(~x) - ln(x)
+* @brief Caso 1° Bisección x^2 - cos(x)
 */
 void caso_1_biseccion(){
-    encontrar_biseccion("e^(~x) -ln(x)", 1.0f, 1.5f , 0.1f, 100);
+    cout<<"Caso 1 Biseccion"<<endl;
+    encontrar_biseccion("x^2 - cos(x)", -2.0f, 0.5f , 0.001f, 100);
 }
 
 /**
-* @brief Caso 1° Regla Falsa e^(~x) -ln(x)
+* @brief Caso 2° Bisección x^3 + 4*x^2 - 10
+*/
+void caso_2_biseccion(){
+    cout<<"Caso 2 Biseccion"<<endl;
+    encontrar_biseccion("x^3 + 4*x^2 - 10", 0.0f, 2.0f , 0.001f, 100);
+}
+
+/**
+* @brief Caso 1° Regla Falsa x^2 - cos(x)
 */
 void caso_1_regla_falsa(){
-    encontrar_regla_falsa("e^(~x) -ln(x)",  1.0f, 1.5f, 0.1f, 100);
+    cout<<"Caso 1 Regla Falsa"<<endl;
+    encontrar_regla_falsa("x^2 - cos(x)",  -2.0f, 0.5f, 0.001f, 100);
     
 }
 
 /**
-* @brief Caso 1° Newton Rapsohon e^(~x) -ln(x)
+* @brief Caso 2° Regla Falsa x^3 + 4*x^2 - 10
+*/
+void caso_2_regla_falsa(){
+    cout<<"Caso 2 Regla Falsa"<<endl;
+    encontrar_regla_falsa("x^3 + 4*x^2 - 10",  0.0f, 2.0f, 0.001f, 100);
+    
+}
+
+/**
+* @brief Caso 1° Newton Rapsohon x^2 - cos(x)
 */
 void caso_1_newton_rapshon(){
-    encontrar_newton_rapshon("e^(~x) -ln(x)", "~e^(~x) -(1/x)", 1.0f, 0.1f, 100);
+    cout<<"Caso 1 Newton Rapsohon"<<endl;
+    encontrar_newton_rapshon("x^2 - cos(x)", "2*x + sin(x)", 0.5f, 0.001f, 100);
 }
 
-
 /**
-* @brief Caso 2° Newton Rapsohon x³ + 4*x² -10
+* @brief Caso 2° Newton Rapsohon x^3 + 4*x^2 -10 
 */
 void caso_2_newton_rapshon(){
-    encontrar_newton_rapshon("x^3 + 4*x^2 - 10", "3*x^2 + 8*x", -2.3f, 0.1f, 100);
+    cout<<"Caso 2 Newton Rapsohon"<<endl;
+    encontrar_newton_rapshon("x^3 + 4*x^2 - 10", "3*x^2 + 8*x", 1.0f, 0.001f, 100);
 }
 
 /**
-* @brief Caso 3° Secante e^(-x^2) -x;
+* @brief Caso 1° Secante x^2 - cos(x)
 */
-void caso_3_secante(){
-    encontrar_secante("e^(~x^2) -x", -0.5f, 0.5f, 1.0f, 100);
-    
+void caso_1_secante(){
+    cout<<"Caso 1 Secante"<<endl;
+    encontrar_secante("x^2 - cos(x)", -2.0f, 0.5f, 0.001f, 100);    
+}
+
+/**
+* @brief Caso 2° Secante x^3 + 4*x^2 - 10
+*/
+void caso_2_secante(){
+    cout<<"Caso 2 Secante"<<endl;
+    encontrar_secante("x^3 + 4*x^2 - 10", 0.0f, 2.0f, 0.001f, 100);    
 }
