@@ -11,6 +11,7 @@
 #include "expression.h"
 #include "raices.h"
 
+
 using std::string;
 using raices::solucion;
 
@@ -66,8 +67,9 @@ namespace raices{
                 // Paso 4 repetimos el calculo de xr
                 double numerador = f(x1)* (x0-x1);
                 double denominador = f(x0) - f(x1);
-                double x2 = x1 - (numerador / denominador);
                 
+                double x2 = x1 - (numerador / denominador);
+
                 sol.agregar(x2);
 
                 double er = error_relativo(x2, x1);

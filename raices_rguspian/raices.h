@@ -86,7 +86,7 @@ namespace raices{
                 if (aproximaciones.size() >1 ){
                     cout<<setw(15) <<"Nuevo"
                     <<setw(15)<<"Anterior"
-                    <<setw(15)<<"Error Relativo porcentual"<< endl; 
+                    <<setw(15)<<"Error Relativo"<< endl; 
                 }
                 for (size_t i = 1; i<aproximaciones.size();  i ++){
                     cout<<setw(15) << setprecision(precision) << aproximaciones[i]
