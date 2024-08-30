@@ -1,12 +1,12 @@
 /**
  * @file
- * @brief Newton Rapshon
+ * @brief Newton Raphson
  * @author  Rodrigo Alejandro Guspian Perez <rguspian@unicauca.edu.co>
  * @copyright MIT License
 */
 
-#ifndef NEWTOW_RAPSHON
-#define NEWTOW_RAPSHON
+#ifndef NEWTOW_RAPHSON
+#define NEWTOW_RAPHSON
 
 #include "expression.h"
 #include "raices.h"
@@ -15,15 +15,15 @@ using std::string;
 using raices::solucion;
 
 namespace raices{
-    class newton_rapshon{
+    class newton_raphson{
         
     public:
         /**
-         * @brief Crea una nueva instancia del método de la regla falsa
+         * @brief Crea una nueva instancia del método de Newton Raphson
          * @param f_str Función como texto
          * @param df_str Derivada como texto
          */
-        newton_rapshon(string f_str, string df_str):f(f_str),df(df_str){
+        newton_raphson(string f_str, string df_str):f(f_str),df(df_str){
 
         }
 

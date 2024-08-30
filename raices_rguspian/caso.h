@@ -17,6 +17,9 @@ void caso_1_newton_rapshon();
 void caso_2_newton_rapshon();
 void caso_1_secante();
 void caso_2_secante();
-
-
+void caso_especial_newton_rapshon();
+void caso_especial_newton_rapshon_g();
+void caso_especial_2_newton_rapshon_g();
+void caso_especial_2_newton_rapshon_g();
+void caso_especial_comparacion();
 #endif

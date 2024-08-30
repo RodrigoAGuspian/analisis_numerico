@@ -14,14 +14,16 @@
 #include "biseccion.h"
 #include "encontrar.h"
 #include "falsa.h"
-#include "newtonRapshon.h"
+#include "newtonRaphson.h"
+#include "newtonRaphsonG.h"
 #include "secante.h"
 #include "tvi.h"
 
 using std::string;
 using raices::biseccion;
 using raices::falsa;
-using raices::newton_rapshon;
+using raices::newton_raphson;
+using raices::newton_raphson_g;
 using raices::secante;
 using raices::solucion;
 using raices::tvi;
@@ -93,9 +95,9 @@ void encontrar_regla_falsa(string f_str, double xi, double xs, double tol, int n
  * @param n Número máximo de repeticiones
 */
 
-void encontrar_newton_rapshon(string f_str, string df_str, double p0, double tol, int n){
+void encontrar_newton_raphson(string f_str, string df_str, double p0, double tol, int n){
     // Instanciar newton rapshon.
-    newton_rapshon nr(f_str, df_str);
+    newton_raphson nr(f_str, df_str);
     
     // Encontrar la solución.
     solucion sol = nr.encontrar(p0, tol, n);
@@ -122,3 +124,25 @@ void encontrar_secante(string f_str, double x0, double x1, double tol, int n){
     sol.imprimir();
 }
 
+
+/**
+ * @brief Encuentra la raíz de una función utilizando el método de Newton Rapshon.
+ * @param f_str Función como texto
+ * @param df_str Derivada como texto
+ * @param df2_str Segunda derivada como texto
+ * @param p0 Valor Inicial (primera aproximación de x)
+ * @param tol Tolerancia - del Error Relativo Porcentual
+ * @param n Número máximo de repeticiones
+*/
+
+
+
+void encontrar_newton_raphson_g(string f_str, string df_str, string  df2_str,double p0, double tol, int n){
+    // Instanciar newton rapshon.
+    newton_raphson_g nr(f_str, df_str, df2_str);
+    
+    // Encontrar la solución.
+    solucion sol = nr.encontrar(p0, tol, n);
+
+    sol.imprimir();
+}
