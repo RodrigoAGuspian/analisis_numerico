@@ -147,12 +147,3 @@ void caso_1_muller(){
     cout<<"Caso 1 Müller"<<endl;
     encontrar_muller("x^2 - cos(x)", -2.0f, 10.f, 0.5f, 1e-5, 100);    
 }
-
-
-/**
-* @brief Caso 2° Müller x^2 - cos(x)
-*/
-void caso_1_muller(){
-    cout<<"Caso 1 Müller"<<endl;
-    encontrar_muller("x^2 - cos(x)", -2.0f, 10.f, 0.5f, 1e-5, 100);    
-}
