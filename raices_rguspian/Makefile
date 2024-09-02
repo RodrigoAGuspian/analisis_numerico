@@ -7,7 +7,7 @@ main.o: main.cpp caso.h
 caso.o: caso.cpp caso.h encontrar.h
 	g++ -c -o caso.o caso.cpp
 
-encontrar.o: encontrar.cpp encontrar.h comparar.h biseccion.h tvi.h expression.h encontrar.h falsa.h newtonRaphson.h newtonRaphsonG.h secante.h 
+encontrar.o: encontrar.cpp encontrar.h comparar.h biseccion.h tvi.h expression.h encontrar.h falsa.h newtonRaphson.h newtonRaphsonG.h secante.h  muller.h
 	g++ -c -o encontrar.o encontrar.cpp
 
 comparar.o: comparar.cpp comparar.h encontrar.h

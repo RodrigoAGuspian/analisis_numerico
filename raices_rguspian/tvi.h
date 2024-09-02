@@ -28,7 +28,7 @@ namespace raices{
         }
 
         /**
-         * @brief Encuentra una solucón a la función usando TVI
+         * @brief Encuentra una solución a la función usando TVI
          * @param a Límite inferior de la función
          * @param b Límite superior de la función
          * @param h distancía del paso para buscar la raiz de la función 

@@ -139,3 +139,20 @@ void caso_especial_comparacion(){
     comparar_newton_raphson("x^4 -4x^2 +4", "4*x^3 -8*x ", "12*x^2- 8", valores_iniciales, 0.001f, 100);
 
 }
+
+/**
+* @brief Caso 1° Müller x^2 - cos(x)
+*/
+void caso_1_muller(){
+    cout<<"Caso 1 Müller"<<endl;
+    encontrar_muller("x^2 - cos(x)", -2.0f, 10.f, 0.5f, 1e-5, 100);    
+}
+
+
+/**
+* @brief Caso 2° Müller x^2 - cos(x)
+*/
+void caso_1_muller(){
+    cout<<"Caso 1 Müller"<<endl;
+    encontrar_muller("x^2 - cos(x)", -2.0f, 10.f, 0.5f, 1e-5, 100);    
+}

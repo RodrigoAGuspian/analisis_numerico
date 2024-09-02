@@ -14,6 +14,7 @@
 #include "biseccion.h"
 #include "encontrar.h"
 #include "falsa.h"
+#include "muller.h"
 #include "newtonRaphson.h"
 #include "newtonRaphsonG.h"
 #include "secante.h"
@@ -22,6 +23,7 @@
 using std::string;
 using raices::biseccion;
 using raices::falsa;
+using raices::muller;
 using raices::newton_raphson;
 using raices::newton_raphson_g;
 using raices::secante;
@@ -135,14 +137,34 @@ void encontrar_secante(string f_str, double x0, double x1, double tol, int n){
  * @param n Número máximo de repeticiones
 */
 
-
-
 void encontrar_newton_raphson_g(string f_str, string df_str, string  df2_str,double p0, double tol, int n){
-    // Instanciar newton rapshon.
+    // Instanciar newton rapshon generalizado.
     newton_raphson_g nr(f_str, df_str, df2_str);
     
     // Encontrar la solución.
     solucion sol = nr.encontrar(p0, tol, n);
 
     sol.imprimir();
+}
+
+
+/**
+ * @brief Encuentra una raiz de la función usando el método de Müller
+ * @param f_str Función como texto
+ * @param x0 Punto inicial
+ * @param x1 Punto intermedio
+ * @param x2 Punto final
+ * @param tol Tolerancia - del Error Relativo Porcentual
+ * @param n Número máximo de repeticiones
+ * 
+*/
+void encontrar_muller(string f_str, double x0, double x1, double x2, double tol, int n){
+    // Instanciar Müller
+    muller m(f_str);
+
+    // Encontrar la solución
+    solucion sol = m.encontrar(x0, x1, x2, tol, n);
+    sol.imprimir();
+
+    
 }

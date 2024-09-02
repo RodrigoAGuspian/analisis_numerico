@@ -29,6 +29,7 @@ int main(int argc, char const *argv[]){
 
     //caso_especial_newton_rapshon();
     //caso_especial_newton_rapshon_g();   
-    caso_especial_comparacion();
+    //caso_especial_comparacion();
+    caso_1_muller();
     return 0;
 }

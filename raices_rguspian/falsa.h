@@ -27,7 +27,7 @@ namespace raices{
         }
 
         /**
-         * @brief Encuentra una solucón a la función usando TVI
+         * @brief Encuentra una solucón a la función usando el método de la regla falsa
          * @param xi Límite inferior de la función
          * @param xs Límite superior de la función
          * @param tol Tolerancia - del Error Relativo Porcentual

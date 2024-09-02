@@ -29,7 +29,7 @@ namespace raices{
         }
 
         /**
-         * @brief Encuentra una solucón a la función usando TVI
+         * @brief Encuentra una solución a la función usando el método bisección
          * @param a Límite inferior de la función
          * @param b Límite superior de la función
          * @param tol Tolerancia - del Error Relativo Porcentual

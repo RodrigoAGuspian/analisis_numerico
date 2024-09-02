@@ -18,5 +18,5 @@ void encontrar_regla_falsa(string f_str, double xi, double xs, double tol, int n
 void encontrar_newton_raphson(string f_str, string df_str, double p0, double tol, int n);
 void encontrar_secante(string f_str, double x0, double x1, double tol, int n);
 void encontrar_newton_raphson_g(string f_str, string df_str, string df2_str,double p0, double tol, int n);
-
+void encontrar_muller(string f_str, double x0, double x1, double x2, double tol, int n);
 #endif

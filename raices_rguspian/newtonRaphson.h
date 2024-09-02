@@ -28,7 +28,7 @@ namespace raices{
         }
 
         /**
-         * @brief Encuentra una solucón a la función usando Newton Rapshon
+         * @brief Encuentra una solución a la función usando Newton Rapshon
          * @param p0 Valor Inicial (primera aproximación de x)
          * @param tol Tolerancia - del Error Relativo Porcentual
          * @param n Número máximo de repeticiones

@@ -28,7 +28,7 @@ namespace raices{
         }
 
         /**
-         * @brief Encuentra una solucón a la función usando TVI
+         * @brief Encuentra una solución a la función usando el método de la secante
          * @param x0 Valor x0 de la funcion
          * @param x1 Valor x0 de la funcion
          * @param tol Tolerancia - del Error Relativo Porcentual
