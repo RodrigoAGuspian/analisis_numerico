@@ -89,9 +89,10 @@ namespace regresion{
             return (b1 * x_est) + b0;
         }
 
-        friend ostream& operator<<(ostream& os, const modelo_lineal& m){
+        friend ostream& operator<<(ostream & os, const modelo_lineal & m){
             if (!m.valido){
                 os<<"el modelo no es válido :("<<endl;
+                return os;
             }
 
             os<< "Recta de regresión: "<<"y= "<<m.b1 << " * x"
@@ -160,7 +161,67 @@ namespace regresion{
         return v;
     }
 
+    /**
+     * @brief Función potencia y = c * x ^ a
+     * 
+    */
+     struct modelo_potencia{
+        double c;
+        double a;
+        struct modelo_lineal lineal;
+        bool valido;
+        modelo_potencia(vector<double> x, vector<double> y): lineal(log(x), log(y)){
+            c = pow(10.0f, lineal.b0);
+            valido = lineal.valido;
+            a = lineal.b1;
+        }
+
+        double estimar(double x_est){
+            return c * pow(x_est, a);
+        }
+
+        friend ostream& operator<<(ostream & os, const modelo_potencia & m){
+            if (!m.lineal.valido){
+                os<<"El modelo no es válido :("<<endl;
+                return os;
+            }
+
+            os<<"Función potencia"
+                <<" y = "<<m.c
+                <<" * x^"<<m.a
+                <<endl;
+            os<<"Desv. Estandar: "
+            <<m.lineal.sy<<endl;
+            os<<"Error estandar de aproximacion: "
+            <<m.lineal.syx<<endl;
+            os<<"Coeficiente determinación: "
+            <<m.lineal.r2<<endl;
+            return os;
+            return os;
+        }
+     };
      
+
+
+    class lineal_potencia{
+        public:
+            lineal_potencia(vector<double> x, vector<double> y):modelo(x, y){
+            }
+
+            double estimar(double x_est){
+                if (!modelo.valido){
+                    return NAN;
+                }
+                return modelo.estimar(x_est);
+            }
+            modelo_potencia  obtener_modelo(){
+                return modelo;
+            }
+            
+        private:
+            modelo_potencia modelo;
+    };
+
 }
 
 #endif

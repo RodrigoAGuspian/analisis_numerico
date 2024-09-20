@@ -17,9 +17,9 @@ using std::cerr;
 using std::vector;
 
 using regresion::lineal_simple;
+using regresion::lineal_potencia;
 using regresion::modelo_lineal;
-using regresion::log;
-using regresion::ln;
+using regresion::modelo_potencia;
 
 void caso_1_regresion(){
     cout<<"Caso 1 regersión."<<endl;
@@ -32,9 +32,6 @@ void caso_1_regresion(){
     double y_est= l.estimar(x_est);
 
     cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
-
-
-
     modelo_lineal m = l.obtener_modelo();
 
     cout<<m;
@@ -47,9 +44,15 @@ void caso_1_funcion_potencia(){
     cout<<" Caso 1 linealización de función potencia"<<endl;
 
     vector<double> x {10.0f, 20.0f, 30.0f, 40.0f, 50.0f, 60.0f, 70.0f, 80.0f};
-    vector<double> xlog = log(x);
+    vector<double> y {1.06f, 1.33f, 1.52f, 1.68f, 1.81f, 1.91f, 2.01f, 2.11f};
+    lineal_potencia l(x, y);
 
-    for (auto x1: xlog){
-        cout<<x1<<endl;
-    }
+    double x_est = 35.0f;
+    double y_est= l.estimar(x_est);
+
+    cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
+
+    modelo_potencia m = l.obtener_modelo();
+
+    cout<<m;
 }
