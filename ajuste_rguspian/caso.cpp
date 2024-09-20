@@ -30,13 +30,11 @@ void caso_1_regresion(){
 
     double x_est = 3.5f;
     double y_est= l.estimar(x_est);
-
-    cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
+    
     modelo_lineal m = l.obtener_modelo();
-
     cout<<m;
 
-
+    cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
     
 }
 
@@ -50,9 +48,10 @@ void caso_1_funcion_potencia(){
     double x_est = 35.0f;
     double y_est= l.estimar(x_est);
 
+    modelo_potencia m = l.obtener_modelo();
+    cout<<m;
+
     cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
 
-    modelo_potencia m = l.obtener_modelo();
-
-    cout<<m;
+    
 }
