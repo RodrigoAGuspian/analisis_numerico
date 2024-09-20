@@ -10,4 +10,5 @@
 #define CASO_H
 
 void caso_1_regresion();
+void caso_1_funcion_potencia();
 #endif
