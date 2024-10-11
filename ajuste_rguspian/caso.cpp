@@ -9,6 +9,7 @@
 
 #include "caso.h"
 #include "regresion.h"
+#include "regresion_cuadratica.h"
 #include <vector>
 
 using std::cout;
@@ -20,6 +21,8 @@ using regresion::lineal_simple;
 using regresion::lineal_potencia;
 using regresion::modelo_lineal;
 using regresion::modelo_potencia;
+using regresion::cuadratica;
+using regresion::modelo_cuadratico;
 
 void caso_1_regresion(){
     cout<<"Caso 1 regersión."<<endl;
@@ -54,4 +57,20 @@ void caso_1_funcion_potencia(){
     cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
 
     
+}
+
+void caso_1_regresion_cuadratica(){
+    cout<<"Caso 1 Regresión Cuadratica."<<endl;
+    vector<double> x = {0.0f, 1.0f, 2.0f, 3.0f, 4.0f, 5.0f};
+    vector<double> y ={ 2.1f, 7.7f, 13.6f, 27.2f, 40.9f, 61.1f};
+
+    cuadratica c(x, y);
+
+    double x_est = 2.5f;
+    double y_est= c.estimar(x_est);
+
+    modelo_cuadratico m_c = c.obtener_modelo();
+    cout<<m_c;
+
+    cout<< "El valor de y para x = "<< x_est<< " es: "<<y_est<<endl;
 }

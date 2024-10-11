@@ -28,6 +28,14 @@ namespace regresion{
         double syx; /* !< Error estandar de aproximación */
         double r2; /* !< Coeficiente determinación*/
         bool valido = false; 
+        
+
+        /**
+         * @brief Crea una ninstancia de un modelo de regresion lineal
+         * @param x Variable independiente
+         * @param y Variable dependiente
+         * 
+        */
         modelo_lineal (vector<double> x, vector<double> y): x(x), y(y){
             construir();
         }
@@ -85,10 +93,21 @@ namespace regresion{
 
         }
 
+        /**
+         * @brief Calcula el valor estimado de x_est usando regresion lineal
+         * @param x_est Valor de x a estimar
+         * @return Valor de la ecuación
+         */
         double estimar(double x_est){
             return (b1 * x_est) + b0;
         }
 
+        /**
+         * @brief Sobrecarga del operador sobre un flujo de salida
+         * @param os Flujo de salida a envaar el modelo
+         * @param m Modelo a enviar
+         * @return Flujo luego e enviar el modelo
+         */
         friend ostream& operator<<(ostream & os, const modelo_lineal & m){
             if (!m.valido){
                 os<<"el modelo no es válido :("<<endl;
@@ -109,8 +128,16 @@ namespace regresion{
 
 
     };
+    /**
+     * @brief Regresión Lineal Simple
+    */
+
     class lineal_simple{
         public:
+            /**
+             * @brief Crea una instancia de regresion lineal simple
+             * @param x_est Valor
+            */
             lineal_simple(vector<double> x, vector<double> y):modelo(x, y){
             }
 
@@ -131,7 +158,7 @@ namespace regresion{
     /**
      * @breif Calcula el logartimo neperiano de un vector de datos
      * @param v Vector de datos
-     * @return Copiao con el logaritmo neperiando de los datos;
+     * @return Copia con el logaritmo neperiando de los datos;
      */
     
 
